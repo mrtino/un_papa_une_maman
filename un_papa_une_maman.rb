@@ -33,7 +33,7 @@ papa_maman = [ "papa", "maman" ]        # Définition des deux mots par défaut
 rand_num = rand(2)                      # Choisit aléatoirement quel mot va se faire remplacer
 
 words = File.open(ARGV[rand_num], "r")                                                                          # Ouverture du fichier de mots correspondant
-rand(`wc -l #{ARGV[rand_num]}`.strip.split(' ')[0].to_i + 1).times { papa_maman[rand_num] = words.gets.strip }      # Remplace le mot par un mot aléatoire du fichier
+(rand(`wc -l #{ARGV[rand_num]}`.strip.split(' ')[0].to_i) + 1).times { papa_maman[rand_num] = words.gets.strip }      # Remplace le mot par un mot aléatoire du fichier
 
 # Fermeture du fichier de mots
 words.close
