@@ -39,7 +39,7 @@ words = File.open(ARGV[rand_num], "r")                                          
 words.close
 
 # Envoi du tweet
-client.update "Un #{papa_maman[0]}, une #{papa_maman[1]}."
+client.update "Un #{papa_maman[0]}, une #{papa_maman[1]}.\nOn ne ment pas aux enfants !"
 
 # Fermeture de l'application si tout s'est bien passé
 exit 0
